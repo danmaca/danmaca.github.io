@@ -1,0 +1,153 @@
+:root {
+	--bg: #fbfaf7;
+	--surface: #ffffff;
+	--text: #1d2329;
+	--muted: #5b6672;
+	--border: #e3e0d8;
+	--accent: #0f7b6c;
+	--accent-soft: #e3f2ef;
+	color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #15191d;
+		--surface: #1c2126;
+		--text: #e6e9ec;
+		--muted: #9aa5b1;
+		--border: #2c333a;
+		--accent: #4cc2ad;
+		--accent-soft: #1d3330;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.page {
+	max-width: 46rem;
+	margin: 0 auto;
+	padding: 2rem 1rem 3rem;
+}
+
+header.site {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem 1.5rem;
+	padding-bottom: 1rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	color: var(--text);
+	font-size: 1.15rem;
+	font-weight: 650;
+	text-decoration: none;
+}
+
+.brand svg {
+	width: 2rem;
+	height: 2rem;
+	color: var(--accent);
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem 1rem;
+}
+
+nav a {
+	color: var(--muted);
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: var(--text);
+}
+
+nav a[aria-current="page"] {
+	color: var(--accent);
+	font-weight: 600;
+}
+
+h1 {
+	margin: 0 0 0.5rem;
+	font-size: 2rem;
+	line-height: 1.2;
+}
+
+h2 {
+	margin: 2rem 0 0.5rem;
+	font-size: 1.2rem;
+}
+
+a {
+	color: var(--accent);
+}
+
+.lead {
+	color: var(--muted);
+	font-size: 1.125rem;
+}
+
+.updated {
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+
+code {
+	padding: 0.1em 0.35em;
+	border-radius: 4px;
+	background: var(--accent-soft);
+	font-family: ui-monospace, Consolas, monospace;
+	font-size: 0.9em;
+	overflow-wrap: anywhere;
+}
+
+.note {
+	margin: 1.5rem 0;
+	padding: 1rem 1.25rem;
+	border: 1px solid var(--border);
+	border-left: 4px solid var(--accent);
+	border-radius: 8px;
+	background: var(--surface);
+}
+
+ul {
+	padding-left: 1.25rem;
+}
+
+li {
+	margin: 0.3rem 0;
+}
+
+footer.site {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 0.5rem 1rem;
+	margin-top: 3rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--border);
+	color: var(--muted);
+	font-size: 0.875rem;
+}
+
+footer.site a {
+	color: var(--muted);
+}
